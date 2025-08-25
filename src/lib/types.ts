@@ -12,11 +12,19 @@ export type PersonalInfo = {
   contact_info: Contact[];
 };
 
+export type Role = {
+  role: string;
+  date: string;
+};
+
 export type Experience = {
   company: string;
   company_url: string;
-  roles: string[];
+  roles: Role[];
+  description: string;
+  skills: string[];
 };
+
 
 export type Projects = {
   title: string;
@@ -32,10 +40,17 @@ export type Education = {
   date: string;
 };
 
+export type AboutMe = {
+  title: string;
+  subtitle: string;
+  description: string;
+};
+
 
 export type CVData = {
   personal_info: PersonalInfo;
   experience: Experience[];
   projects: Projects[];
   education: Education[];
+  about: AboutMe;
 };
